@@ -51,7 +51,7 @@ module api './app/api.bicep' = {
     storageAccountName: storage.outputs.name
     appSettings: {
       OPENAI_API_KEY: openAIKey
-      //AzureWebJobsFeatureFlags: 'EnableWorkerIndexing'
+      AzureWebJobsFeatureFlags: 'EnableWorkerIndexing'
     }
   }
 }
