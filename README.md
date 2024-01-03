@@ -1,3 +1,21 @@
+---
+page_type: sample
+languages:
+- azdeveloper
+- javascript
+- bicep
+- typescript
+- html
+products:
+- azure
+- azure-functions
+- azure-pipelines
+urlFragment: javascript-openapi-chatgpt-func
+name: Azure Functions - Chat using ChatGPT (Node.js JavaScript Function)
+description: This sample shows how to take a ChatGPT prompt as HTTP Get or Post input, calculates the completions using OpenAI ChatGPT service, and then returns the output plus caches in a Blob state store.
+---
+<!-- YAML front-matter schema: https://review.learn.microsoft.com/en-us/help/contribute/samples/process/onboarding?branch=main#supported-metadata-fields-for-readmemd -->
+
 # Azure Functions
 ## Chat using ChatGPT (Node.js JavaScript Function)
 
