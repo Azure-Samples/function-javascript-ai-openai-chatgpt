@@ -8,7 +8,7 @@ languages:
 products:
 - azure
 - azure-functions
-- azure-openai-service
+- azure-openai
 urlFragment: function-javascript-ai-openai-chatgpt
 name: Azure Functions - Chat using ChatGPT (Node.js JavaScript Function)
 description: Using ChatGPT prompt with Node.js as HTTP Get or Post input, calculates the completions using OpenAI ChatGPT service, returns the output plus caches.
