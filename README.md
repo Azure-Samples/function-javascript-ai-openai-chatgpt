@@ -4,7 +4,6 @@ languages:
 - azdeveloper
 - javascript
 - bicep
-- typescript
 - html
 products:
 - azure
