@@ -1,8 +1,41 @@
+### Simple Whois Completion
+GET http://localhost:7071/api/whois/Turing HTTP/1.1
 
-
-POST http://localhost:7071/api/chat HTTP/1.1
+### Simple Ask Completion
+POST http://localhost:7071/api/ask HTTP/1.1
 content-type: application/json
 
 {
     "prompt": "Tell me two most popular programming features of Azure Functions"
+}
+
+### Stateful Chatbot
+
+### CreateChatBot
+PUT http://localhost:7071/api/chats/abc123
+Content-Type: application/json
+
+{
+    "name": "Sample ChatBot",
+    "description": "This is a sample chatbot."
+}
+
+### GetChatState
+GET http://localhost:7071/api/chats/abc123
+Content-Type: application/json
+
+### PostChat
+POST http://localhost:7071/api/chats/abc123
+Content-Type: application/json
+
+{
+    "message": "Hello, how can I assist you today?"
+}
+
+### PostChat
+POST http://localhost:7071/api/chats/abc123
+Content-Type: application/json
+
+{
+    "message": "Need help with directions from Redmond to SeaTac?"
 }
