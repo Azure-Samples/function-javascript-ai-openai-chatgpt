@@ -25,7 +25,7 @@ description: This sample shows simple ways to interact with ChatGPT & OpenAI usi
 
 This sample shows simple ways to interact with ChatGPT & OpenAI using Azure Functions [Open AI Triggers and Bindings extension](https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-openai?tabs=isolated-process&pivots=programming-language-javascript).  You can issue simple prompts and receive completions using the `ask` function, and you can send messages and perform a stateful session with a friendly ChatBot using the `chat` function.  The app deploys easily to Azure Functions Flex Consumption hosting plan using `azd up`. 
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=575770869)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Azure-Samples/function-javascript-ai-openai-chatgpt)
 
 ## Run on your local environment
 
