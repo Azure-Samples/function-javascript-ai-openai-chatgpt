@@ -1,13 +1,13 @@
-### Simple Whois Completion(Local)
-GET http://localhost:7071/api/whois/Turing HTTP/1.1
-
 ### Simple Ask Completion (Local)
-POST https://localhost:7071/api/ask HTTP/1.1
+POST http://localhost:7071/api/ask HTTP/1.1
 content-type: application/json
 
 {
     "prompt": "Tell me two most popular programming features of Azure Functions"
 }
+
+### Simple Whois Completion(Local)
+GET http://localhost:7071/api/whois/Turing HTTP/1.1
 
 ### Simple Ask Completion (Cloud)
 ### .gitignore this file if and when you set key
