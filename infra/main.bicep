@@ -24,10 +24,6 @@ param resourceGroupName string = ''
 param storageAccountName string = ''
 param vNetName string = ''
 param disableLocalAuth bool = true
-param processedTextContainerName string = 'processed-text'
-param unprocessedPdfContainerName string = 'unprocessed-text'
-
-param aiResourceName string = ''
 
 @allowed([ 'consumption', 'flexconsumption' ])
 param azFunctionHostingPlanType string = 'flexconsumption'
@@ -108,6 +104,7 @@ module api './app/api.bicep' = {
     identityId: apiUserAssignedIdentity.outputs.identityId
     identityClientId: apiUserAssignedIdentity.outputs.identityClientId
     appSettings: {
+      CHAT_MODEL_DEPLOYMENT_NAME: chatGpt.deploymentName
     }
     virtualNetworkSubnetId: skipVnet ? '' : serviceVirtualNetwork.outputs.appSubnetID
     aiServiceUrl: ai.outputs.endpoint
@@ -121,7 +118,7 @@ module ai 'core/ai/openai.bicep' = {
     name: !empty(openAiServiceName) ? openAiServiceName : '${abbrs.cognitiveServicesAccounts}${resourceToken}'
     location: location
     tags: tags
-    publicNetworkAccess: azFunctionHostingPlanType == 'flexconsumption' ? 'Disabled' : 'Enabled'
+    publicNetworkAccess: skipVnet == 'false' ? 'Disabled' : 'Enabled'
     sku: {
       name: openAiSkuName
     }
@@ -311,6 +308,7 @@ output APPLICATIONINSIGHTS_CONNECTION_STRING string = monitoring.outputs.applica
 output AZURE_LOCATION string = location
 output AZURE_TENANT_ID string = tenant().tenantId
 output SERVICE_API_NAME string = api.outputs.SERVICE_API_NAME
+output SERVICE_API_URI string = api.outputs.SERVICE_API_URI
 output AZURE_FUNCTION_APP_NAME string = api.outputs.SERVICE_API_NAME
 output RESOURCE_GROUP string = rg.name
 output AZURE_OPENAI_ENDPOINT string = ai.outputs.endpoint
