@@ -11,6 +11,7 @@ const chatBotCreateOutput = output.generic({
     type: 'assistantCreate'
 })
 
+// http PUT function to start ChatBot conversation based on a chatID for the session
 app.http('CreateChatBot', {
     methods: ['PUT'],
     route: 'chats/{chatID}',
@@ -39,6 +40,7 @@ const assistantQueryInput = input.generic({
     collectionName: COLLECTION_NAME
 })
 
+// http GET function to get ChatBot conversation state based on a chatID for the session and timestamp
 app.http('GetChatState', {
     methods: ['GET'],
     route: 'chats/{chatID}',
@@ -60,6 +62,7 @@ const assistantPostInput = input.generic({
     collectionName: COLLECTION_NAME
 })
 
+// http POST function for user to send a message to ChatBot conversation based on a chatID for the session
 app.http('PostChat', {
     methods: ['POST'],
     route: 'chats/{chatID}',

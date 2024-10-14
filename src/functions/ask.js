@@ -1,7 +1,8 @@
 const { app, input } = require("@azure/functions");
 
-// This OpenAI completion input requires a {prompt} binding value.
-const openAIAskCompletionInput = input.generic({
+// Simple ask http POST function that returns the completion based on user prompt
+// This OpenAI completion input requires a {prompt} binding value
+const openAICompletionInput = input.generic({
     prompt: '{prompt}?',
     maxTokens: '100',
     type: 'textCompletion',
@@ -12,13 +13,14 @@ app.http('ask', {
     methods: ['POST'],
     route: 'ask',
     authLevel: 'function',
-    extraInputs: [openAIAskCompletionInput],
+    extraInputs: [openAICompletionInput],
     handler: async (_request, context) => {
-        var response = context.extraInputs.get(openAIAskCompletionInput)
+        var response = context.extraInputs.get(openAICompletionInput)
         return { body: response.content.trim() }
     }
 });
 
+// Simple WhoIs http GET function that returns the completion based on name from user
 // This OpenAI completion input requires a {name} binding value.
 const openAIWhoIsCompletionInput = input.generic({
     prompt: 'Who is {name}?',
