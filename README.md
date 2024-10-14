@@ -180,7 +180,7 @@ app.http('ask', {
 
 The stateful chatbot is shown in [src/functions/chat.js](./src/functions/chat.js).  This is a stateful function meaning you can create or ask for a session by <ChatId> and continue where you left off with the same context and memories stored by the function binding (backed Table storage).  This makes use of the Assistants feature of the Azure Functions OpenAI extension that has a set of inputs and outputs for this case.  
 
-To create or look up a session we have the CreateChatBot as an http PUT function.  Note how it is functioned to leverage a Storage account and for simplicity the code will reuse your AzureWebJobStorage connection.  The output binding of `assistantCreate` will actually kick off the create.  
+To create or look up a session we have the CreateChatBot as an http PUT function.  Note how the code will reuse your AzureWebJobStorage connection.  The output binding of `assistantCreate` will actually kick off the create. 
 
 ```javascript
 const chatBotCreateOutput = output.generic({
