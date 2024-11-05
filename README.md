@@ -1,3 +1,4 @@
+<!--
 ---
 page_type: sample
 languages:
@@ -18,6 +19,8 @@ urlFragment: javascript-openapi-chatgpt-func
 name: Azure Functions - Chat using ChatGPT (Node.js JavaScript Function)
 description: This sample shows simple ways to interact with ChatGPT & OpenAI using Azure Functions [Open AI Triggers and Bindings extension](https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-openai?tabs=isolated-process&pivots=programming-language-javascript).  You can issue simple prompts and receive completions using the `ask` function, and you can send messages and perform a stateful session with a friendly ChatBot using the `chat` function.
 ---
+-->
+
 <!-- YAML front-matter schema: https://review.learn.microsoft.com/en-us/help/contribute/samples/process/onboarding?branch=main#supported-metadata-fields-for-readmemd -->
 
 # Azure Functions
