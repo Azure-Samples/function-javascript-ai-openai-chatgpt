@@ -16,17 +16,17 @@ products:
 - blob-storage
 - table-storage
 urlFragment: javascript-openapi-chatgpt-func
-name: Azure Functions - Chat using ChatGPT (Node.js JavaScript Function)
-description: This sample shows simple ways to interact with ChatGPT & OpenAI using Azure Functions [Open AI Triggers and Bindings extension](https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-openai?tabs=isolated-process&pivots=programming-language-javascript).  You can issue simple prompts and receive completions using the `ask` function, and you can send messages and perform a stateful session with a friendly ChatBot using the `chat` function.
+name: Azure Functions - Chat using Azure OpenAI (Node.js JavaScript Function)
+description: This sample shows simple ways to interact with Azure OpenAI & GPT-4 model to build an interactive using Azure Functions [Azure Open AI Triggers and Bindings extension](https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-openai?tabs=isolated-process&pivots=programming-language-javascript).  You can issue simple prompts and receive completions using the `ask` function, and you can send messages and perform a stateful session with a friendly ChatBot using the `chat` function.
 ---
 -->
 
 <!-- YAML front-matter schema: https://review.learn.microsoft.com/en-us/help/contribute/samples/process/onboarding?branch=main#supported-metadata-fields-for-readmemd -->
 
 # Azure Functions
-## Chat using ChatGPT (Node.js JavaScript Function)
+## Chat using Azure OpenAI (Node.js JavaScript Function)
 
-This sample shows simple ways to interact with ChatGPT & OpenAI using Azure Functions [Open AI Triggers and Bindings extension](https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-openai?tabs=isolated-process&pivots=programming-language-javascript).  You can issue simple prompts and receive completions using the `ask` function, and you can send messages and perform a stateful session with a friendly ChatBot using the `chat` function.  The app deploys easily to Azure Functions Flex Consumption hosting plan using `azd up`. 
+This sample shows simple ways to interact with Azure OpenAI & GPT-4 model to build an interactive using Azure Functions [Azure Open AI Triggers and Bindings extension](https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-openai?tabs=isolated-process&pivots=programming-language-javascript).  You can issue simple prompts and receive completions using the `ask` function, and you can send messages and perform a stateful session with a friendly ChatBot using the `chat` function.  The app deploys easily to Azure Functions Flex Consumption hosting plan using `azd up`. 
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Azure-Samples/function-javascript-ai-openai-chatgpt)
 
