@@ -52,7 +52,7 @@ Take note of the value of `AZURE_OPENAI_ENDPOINT` which can be found in `./.azur
 AZURE_OPENAI_ENDPOINT="https://cog-<unique string>.openai.azure.com/"
 ```
 
-Alternatively you can [create an OpenAI resource](https://portal.azure.com/#create/Microsoft.CognitiveServicesTextAnalytics) in the Azure portal to get your key and endpoint. After it deploys, click Go to resource and view the Endpoint value.  You will also need to deploy a model, e.g. with name `chat` and model `gpt-35-turbo`.
+Alternatively you can [create an OpenAI resource](https://portal.azure.com/#create/Microsoft.CognitiveServicesTextAnalytics) in the Azure portal to get your key and endpoint. After it deploys, click Go to resource and view the Endpoint value.  You will also need to deploy a model, e.g. with name `chat` and model `gpt-4o`.
 
 5) Add this `local.settings.json` file to the root of the repo folder to simplify local development.  Replace `AZURE_OPENAI_ENDPOINT` with your value from step 4.  Optionally you can choose a different model deployment in `CHAT_MODEL_DEPLOYMENT_NAME`.  This file will be gitignored to protect secrets from committing to your repo, however by default the sample uses Entra identity (user identity and mananaged identity) so it is secretless.  
 ```json
@@ -157,7 +157,7 @@ The key code that makes the prompting and completion work is as follows in [src/
 
 The whois function expects a name to be sent in the route `/api/whois/<name>` and you get to see a different example of a route and parameter coming in via http GET.  
 
-### Simple prompting and completions with ChatGPT
+### Simple prompting and completions with gpt
 
 ```javascript
 // Simple ask http POST function that returns the completion based on user prompt
@@ -181,7 +181,7 @@ app.http('ask', {
 });
 ```
 
-### Stateful ChatBots with ChatGPT
+### Stateful ChatBots with gpt
 
 The stateful chatbot is shown in [src/functions/chat.js](./src/functions/chat.js).  This is a stateful function meaning you can create or ask for a session by <ChatId> and continue where you left off with the same context and memories stored by the function binding (backed Table storage).  This makes use of the Assistants feature of the Azure Functions OpenAI extension that has a set of inputs and outputs for this case.  
 
